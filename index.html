@@ -8,18 +8,25 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/simplex/bootstrap.min.css" rel="stylesheet">
   <!-- styles: personal -->
   <link href="/app/styles/main.css" rel="stylesheet">
+  <base href="/">
 </head>
   <body>
-    <div class="container">
-      <h1>
-        stuff and things
-      </h1>
-      <div ng-view>
-        <a href="/timer/timer.html"></a>
+    <div class="container-fluid">
+      <div class="col-sm-4">
+        <h1>
+          stuff and things
+        </h1>
+        <p>
+          Oh look, it's an index
+        </p>
+        <p>
+          {{view.message}}
+        </p>
+        <div ng-view></div>
+        <h4 class="text-center">
+          hahaha page-butt
+        </h1>
       </div>
-      <h1>
-        hahaha page-butt
-      </h1>
       <!-- <div ng-controller="firstController" ng-model="initialText">
         <h1>Say something, anything</h1>
         <br>

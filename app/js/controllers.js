@@ -1,3 +1,10 @@
-app.controller('firstController', function($scope) {
-  $scope.greeting = "Hello World!";
-});
+(function() {
+  'use strict';
+
+  angular
+    .module('boostApp')
+    .controller('IndexController', function($scope) {
+      $scope.view = {};
+      $scope.view.message = "What up world"
+    });
+})();
