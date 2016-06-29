@@ -1,0 +1,20 @@
+{
+  "name": "capstone",
+  "version": "1.0.0",
+  "description": "A Capstone project, in which I design an app to boost your self esteem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaymckelly/boost.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaymckelly/boost/issues"
+  },
+  "homepage": "https://github.com/kaymckelly/boost#readme"
+}
