@@ -1,1 +1,1 @@
-var app = angular.module('boostApp', []);
+var app = angular.module('boostApp', ['ui.bootstrap', 'ngAnimate', 'ngTouch']);
