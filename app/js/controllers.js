@@ -3,8 +3,10 @@
 
   angular
     .module('boostApp')
-    .controller('IndexController', function($scope) {
-      $scope.view = {};
-      $scope.view.message = "What up world"
-    });
+    .controller('IndexController', IndexController);
+
+    function IndexController() {
+      var vm = this;
+      vm.message = "What up world"
+    }
 })();

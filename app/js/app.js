@@ -13,8 +13,9 @@
     function config($routeProvider, $locationProvider) {
       $routeProvider
         .when('/timer', {
-          templateUrl: '/timer.html',
-          controller: 'TimerController'
+          templateUrl: '/app/timer/timer.html',
+          controller: 'TimerController',
+          controllerAs: 'vm'
         })
         .otherwise({
           redirectTo: '/'

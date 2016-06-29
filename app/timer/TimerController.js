@@ -3,8 +3,10 @@
 
   angular
     .module('boostApp')
-    .controller('TimerController', function($scope){
-      $scope.view={};
-      $scope.view.message = "Muahahaha it's the timer!"
-    });
+    .controller('TimerController', TimerController);
+
+    function TimerController() {
+      var vm = this;
+      vm.message = "Muahahaha it's the timer!"
+    }
 })();
