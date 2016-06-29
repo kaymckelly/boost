@@ -10,17 +10,27 @@
   <link href="/app/styles/main.css" rel="stylesheet">
 </head>
   <body>
-    <div class="container col-sm-6">
-      <div ng-controller="firstController" ng-model="initialText">
+    <div class="container">
+      <h1>
+        stuff and things
+      </h1>
+      <div ng-view>
+        <a href="/timer/timer.html"></a>
+      </div>
+      <h1>
+        hahaha page-butt
+      </h1>
+      <!-- <div ng-controller="firstController" ng-model="initialText">
         <h1>Say something, anything</h1>
         <br>
         <input type="text" ng-model="greeting"></p>
         <p>{{ greeting }}</p>
-      <!-- page content goes here, w00t! -->
-      </div>
+      < page content goes here, w00t!
+      </div> -->
     </div>
     <!-- scripts: basic necessities -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js" type="text/javascript"></script>
     <!-- scripts: for ui bootstrap -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js" type="text/javascript"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-touch.js" type="text/javascript"></script>
