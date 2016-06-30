@@ -12,60 +12,51 @@
   <base href="/">
 </head>
   <body>
-      <snap-drawer>
-        <div uib-collapse="!isCollapsed">
-          <ul class="nav navbar-nav">
-            <li class="active">
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Boost Somebody</a>
-            </li>
-            <li>
-              <a href="#">Inspire Me</a>
-            </li>
-            <li>
-              <a href="#">Tasks</a>
-            </li>
-            <li>
-              <a href="/timer.html">Timer</a>
-            </li>
-            <li>
-              <a href="#">Habit Tracker</a>
-            </li>
-            <li>
-              <a href="#">Self-Care Checklist</a>
-            </li>
-            <hr />
-            <li>
-              <a href="#">Profile</a>
-            </li>
-            <li>
-              <a href="#">Logout</a>
-            </li>
-          </ul>
-        </div>
-      </snap-drawer>
-    <snap-content>
-      <!-- <nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavController">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="btn navbar-btn" ng-click="isCollapsed = !isCollapsed"> -->
-              <!-- maybe add class navbar-toggle to above button? -->
-              <!-- <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-            </button>
-            <h2 class="navbar-brand">
-              Boost
-            </h2> -->
-            <button snap-toggle="" class="btn navbar-btn">
+    <nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavController">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <snap-content>
+            <button snap-toggle="" class="btn navbar-btn" ng-click="isCollapsed = !isCollapsed">
               <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
             </button>
-          </div>
-          <!-- <div uib-collapse="!isCollapsed">
-          </div> -->
-        <!-- </div>
-      </nav> -->
-    </snap-content>
+          </snap-content>
+        </div>
+      </div>
+    </nav>
+    <snap-drawer>
+      <div ng-controller="NavController" uib-collapse="isCollapsed">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Boost Somebody</a>
+          </li>
+          <li>
+            <a href="#">Inspire Me</a>
+          </li>
+          <li>
+            <a href="#">Tasks</a>
+          </li>
+          <li>
+            <a href="/timer.html">Timer</a>
+          </li>
+          <li>
+            <a href="#">Habit Tracker</a>
+          </li>
+          <li>
+            <a href="#">Self-Care Checklist</a>
+          </li>
+          <hr />
+          <li>
+            <a href="#">Profile</a>
+          </li>
+          <li>
+            <a href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </snap-drawer>
     <div ng-view>
       <!-- This is where views show up! -->
     </div>
