@@ -2,3 +2,16 @@
 .nav, .pagination, .carousel, .panel-title a {
   cursor: pointer;
 }
+
+
+/* Navbar */
+body {
+  padding-top: 70px;
+}
+
+
+/* Title */
+pageTitle {
+  color: #F49A49;
+  letter-spacing: 3px;
+}

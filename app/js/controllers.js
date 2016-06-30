@@ -3,8 +3,14 @@
 
   angular
     .module('boostApp')
-    .controller('IndexController', function($scope) {
-      $scope.view = {};
-      $scope.view.message = "What up world"
-    });
+    .controller('NavController', NavController);
+
+    function NavController($location) {
+      var vm = this;
+      vm.isCollapsed = false;
+      vm.menuClass = function(page) {
+        var current = $location.path().substring(1);
+        return page === current ? "active" : "";
+      };
+    };
 })();

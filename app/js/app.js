@@ -6,15 +6,17 @@
       'ui.bootstrap',
       'ngAnimate',
       'ngTouch',
-      'ngRoute'
+      'ngRoute',
+      'snap'
     ])
     .config(config);
 
     function config($routeProvider, $locationProvider) {
       $routeProvider
         .when('/timer', {
-          templateUrl: '/timer.html',
-          controller: 'TimerController'
+          templateUrl: '/app/timer/timer.html',
+          controller: 'TimerController',
+          controllerAs: 'timer'
         })
         .otherwise({
           redirectTo: '/'
