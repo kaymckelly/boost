@@ -2,3 +2,9 @@
 .nav, .pagination, .carousel, .panel-title a {
   cursor: pointer;
 }
+
+
+/*Navbar*/
+body {
+  padding-top: 70px;
+}

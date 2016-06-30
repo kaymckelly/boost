@@ -6,8 +6,7 @@
       'ui.bootstrap',
       'ngAnimate',
       'ngTouch',
-      'ngRoute',
-      'timer'
+      'ngRoute'
     ])
     .config(config);
 
@@ -16,7 +15,7 @@
         .when('/timer', {
           templateUrl: '/app/timer/timer.html',
           controller: 'TimerController',
-          controllerAs: 'vm'
+          controllerAs: 'timer'
         })
         .otherwise({
           redirectTo: '/'

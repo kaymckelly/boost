@@ -2,10 +2,8 @@
   <h4>
     title!
   </h4>
-  <p>
-    timer view!
-  </p>
-  <p>
-    In case you were wondering: {{vm.message}}
-  </p>
+  {{timer.counter}}
+  <br />
+  <button ng-click="timer.startTimer()" type="button" name="button">Go</button>
+  <button ng-click="timer.stopTimer()" type="button" name="button">Stop</button>
 </div>

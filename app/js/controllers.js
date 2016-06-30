@@ -3,10 +3,10 @@
 
   angular
     .module('boostApp')
-    .controller('IndexController', IndexController);
+    .controller('NavController', NavController);
 
-    function IndexController() {
+    function NavController() {
       var vm = this;
-      vm.message = "What up world"
+      vm.isCollapsed = false;
     }
 })();
