@@ -9,6 +9,7 @@ body {
   padding-top: 80px;
   font-family: 'Raleway', sans-serif;
   color: #032225;
+  background-color: rgba(238, 246, 247, 0.7);
 }
 .pageText {
   font-size: 16px;
@@ -18,6 +19,7 @@ body {
 /* Navbar */
 .navigationBar {
   height: 60px;
+  background-color: rgba(214, 233, 235, 0.9);
 }
 .navLinks {
   margin-top: 60px;
@@ -44,8 +46,7 @@ body {
 .timerBox {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 16px 0 rgba(0, 0, 0, 0.19);
   padding: 30px;
-  /*box-shadow: 10px 10px 5px #FFF477;*/
-  /*box shadow: #D6E9EB;*/
+  border: 1px solid #FFF477;
 }
 .counterBox {
   font-size: 20px;
