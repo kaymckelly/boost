@@ -6,7 +6,8 @@
       'ui.bootstrap',
       'ngAnimate',
       'ngTouch',
-      'ngRoute'
+      'ngRoute',
+      'snap'
     ])
     .config(config);
 
