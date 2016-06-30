@@ -7,16 +7,17 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/simplex/bootstrap.min.css" rel="stylesheet">
   <link href="/app/lib/angular-snap/angular-snap.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Raleway" rel="stylesheet">
   <!-- styles: personal -->
   <link href="/app/styles/main.css" rel="stylesheet">
   <base href="/">
 </head>
   <body>
     <div class="container-fluid">
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <nav class="navbar navbar-default navbar-fixed-top navigationBar">
         <div class="navbar-header">
           <snap-content>
-            <button snap-toggle="" class="btn navbar-btn" ng-click="isCollapsed = !isCollapsed">
+            <button snap-toggle="" class="btn navbar-btn hamburger" ng-click="isCollapsed = !isCollapsed">
               <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
             </button>
           </snap-content>
@@ -24,8 +25,8 @@
       </nav>
       <snap-drawer>
         <div ng-controller="NavController" uib-collapse="!isCollapsed" class="col-sm-6">
-          <ul class="nav navbar-nav">
-            <li class="active">
+          <ul class="nav navbar-nav navLinks">
+            <li>
               <a href="/">Home</a>
             </li>
             <li>
@@ -58,11 +59,13 @@
         </div>
       </snap-drawer>
       <!-- styles not currently working -->
-      <h1 class="text-center pageTitle">
-        Boost
-      </h1>
-      <!-- not sure if this col-sm stuff will work here, or if it needs to be on each individual view -->
-      <div ng-view class="col-sm-7 col-sm-offset-1">
+      <div class="col-sm-6 col-sm-offset-3">
+        <h1 class="text-center pageTitle">
+          Boost
+        </h1>
+        <hr />
+      </div>
+      <div ng-view>
       </div>
     </div>
     <!-- basic scripts -->

@@ -11,7 +11,7 @@
       var myTimeout = null;
 
       vm.startTimer = function() {
-        // $timeout accepts a function and the number of milliseconds until it should execute that function
+        // $timeout accepts a function and a number of milliseconds until it should execute that function
         myTimeout = $timeout(vm.onTimeout, 1000);
       };
 
