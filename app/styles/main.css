@@ -46,9 +46,12 @@ body {
 .timerBox {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 16px 0 rgba(0, 0, 0, 0.19);
   padding: 30px;
-  border: 1px solid #FFF477;
+  border: 1px solid #fff9b3;
 }
 .counterBox {
-  font-size: 20px;
+  font-size: 25px;
   color: #14818B;
+}
+.timerBtn {
+  margin-top: 10px;
 }

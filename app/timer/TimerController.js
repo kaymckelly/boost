@@ -7,7 +7,7 @@
 
     function TimerController($timeout) {
       var vm = this;
-      vm.counter = 90;
+      vm.counter = 120;
       var myTimeout = null;
 
       vm.startTimer = function() {
