@@ -1,9 +1,15 @@
-<div class="col-sm-4 text-center">
-  <h4>
-    title!
-  </h4>
-  {{timer.counter}}
+<div class="col-xs-6 col-xs-offset-3 text-center timerBox">
+  <h3 class="timerTitle">
+    Meditation Timer
+  </h3>
+  <p class="pageText">
+    Meditation is an extremely valuable form of self-care that doesn't cost anything. If you've never meditated before, start with 2 minutes, then work your way up from there.
+  </p>
+  <div class="col-xs-2 col-xs-offset-5 text-center counterBox">
+    {{ timer.counter / 60 | number:0 }}:{{ timer.counter % 60 }}
+  </div>
   <br />
-  <button ng-click="timer.startTimer()" type="button" name="button">Go</button>
-  <button ng-click="timer.stopTimer()" type="button" name="button">Stop</button>
+  <br />
+  <button ng-click="timer.startTimer()" type="button" class="btn btn-md btn-danger timerBtn">Start</button>
+  <button ng-click="timer.stopTimer()" type="button" class="btn btn-md btn-danger timerBtn">Reset</button>
 </div>

@@ -4,9 +4,28 @@
 }
 
 
-/* Navbar */
+/* Page */
 body {
-  padding-top: 70px;
+  padding-top: 80px;
+  font-family: 'Raleway', sans-serif;
+  color: #032225;
+  background-color: rgba(238, 246, 247, 0.7);
+}
+.pageText {
+  font-size: 16px;
+}
+
+
+/* Navbar */
+.navigationBar {
+  height: 60px;
+  background-color: rgba(214, 233, 235, 0.9);
+}
+.navLinks {
+  margin-top: 60px;
+}
+.hamburger {
+  margin: 10px;
 }
 
 
@@ -14,5 +33,25 @@ body {
 .pageTitle {
   color: #F49A49;
   letter-spacing: 4px;
-  font-size: 50px;
+  font-size: 100px;
+  font-family: 'Amatic SC', cursive;
+}
+
+
+/* Meditation Timer */
+.timerTitle {
+  color: #14818B;
+  font-size: 35px;
+}
+.timerBox {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 16px 0 rgba(0, 0, 0, 0.19);
+  padding: 30px;
+  border: 1px solid #fff9b3;
+}
+.counterBox {
+  font-size: 25px;
+  color: #14818B;
+}
+.timerBtn {
+  margin-top: 10px;
 }
