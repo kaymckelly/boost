@@ -18,6 +18,11 @@
           controller: 'TimerController',
           controllerAs: 'timer'
         })
+        .when('/boost', {
+          templateUrl: '/app/boostSomebody/boost.html',
+          controller: 'BoostSomebodyController',
+          controllerAs: 'boost'
+        })
         .otherwise({
           redirectTo: '/'
         })
