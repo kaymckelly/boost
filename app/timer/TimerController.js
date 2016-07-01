@@ -18,7 +18,7 @@
       vm.onTimeout = function() {
         if(vm.counter === 0) {
           $timeout.cancel(myTimeout);
-          alert('A chime will sound!');
+          alert('Congratulations, you have finished your meditation.');
         } else {
           vm.counter--;
           myTimeout = $timeout(vm.onTimeout, 1000);
