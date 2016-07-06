@@ -1,6 +1,5 @@
-var knex = require('./db/knex');
+var knex = require('../knex');
 
 knex('users').select().then(function(data) {
   console.log(data);
-  process.exit(1);
 });
