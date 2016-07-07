@@ -71,3 +71,12 @@ body {
 .boostBtn {
   margin-left: 5px;
 }
+.commentTitle {
+  color: #14818B;
+  font-size: 20px;
+}
+.commentBox {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 16px 0 rgba(0, 0, 0, 0.19);
+  padding: 30px;
+  border: 1px solid #fff9b3;
+}

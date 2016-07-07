@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-// TODO: will need to be recoded upon deployment
+// TODO: cors will need to be recoded upon deployment, as origin of req will change
 app.use(cors({ origin: 'http://localhost:3474' }));
 
 app.use('/api', api);

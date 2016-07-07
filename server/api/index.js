@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* use  */
-router.use('/ask', require('./asks'))
+router.use('/ask', require('./asks'));
+router.use('/comments', require('./comments'));
 
 module.exports = router;
