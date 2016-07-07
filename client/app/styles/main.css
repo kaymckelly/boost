@@ -19,6 +19,10 @@ body {
   padding: 30px;
   border: 1px solid #fff9b3;
 }
+.contentBoxTitle {
+  color: #14818B;
+  font-size: 35px;
+}
 
 
 /* Navbar */
@@ -44,10 +48,6 @@ body {
 
 
 /* Meditation Timer */
-.timerTitle {
-  color: #14818B;
-  font-size: 35px;
-}
 .counterBox {
   font-size: 25px;
   color: #14818B;
@@ -58,3 +58,16 @@ body {
 
 
 /* Boost Somebody */
+.boostButtonBox {
+  margin-top: 10px;
+}
+.askBox {
+  margin-top: 20px;
+}
+.askText {
+  font-size: 16px;
+  text-align: justify;
+}
+.boostBtn {
+  margin-left: 5px;
+}
