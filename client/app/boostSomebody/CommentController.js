@@ -7,12 +7,15 @@
 
     function CommentController($http) {
       var vm = this;
+      vm.newComment = newComment;
+      vm.collapseComment = false;
+
       function newComment() {
         $http.post('http://localhost:3000/api/comments')
         .then(function(result){
-          vm.ask = result.data.ask;
+          vm.comment = result.data.comment;
         })
       }
-    getAsk();
+    newComment();
     }
 })();
