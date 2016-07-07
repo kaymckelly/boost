@@ -10,6 +10,8 @@ body {
   font-family: 'Raleway', sans-serif;
   color: #032225;
   background-color: rgba(238, 246, 247, 0.7);
+  height: 100%;
+  margin-bottom: 30px;
 }
 .pageText {
   font-size: 16px;
@@ -22,6 +24,10 @@ body {
 .contentBoxTitle {
   color: #14818B;
   font-size: 35px;
+}
+.viewBox {
+  height: 100%;
+  margin-bottom: 30px;
 }
 
 
@@ -71,12 +77,14 @@ body {
 .boostBtn {
   margin-left: 5px;
 }
-.commentTitle {
-  color: #14818B;
-  font-size: 20px;
+.commentLabel {
+  color: #F49A49;
+  font-size: 22px;
+  font-weight: bold;
+}
+.commentHelpText {
+  font-size: 16px;
 }
 .commentBox {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 16px 0 rgba(0, 0, 0, 0.19);
   padding: 30px;
-  border: 1px solid #fff9b3;
 }
