@@ -10,9 +10,9 @@
       {{ boost.ask }}
     </p>
   </div>
-  <div class="col-xs-10 col-xs-offset-1 boostButtonBox">
+  <div class="col-xs-10 col-xs-offset-1 boostButtonBox" ng-controller="BoostSomebodyController">
     <button type="button" name="button-boost" class="pull-right btn btn-md btn-danger boostBtn">Boost!</button>
     <button type="button" name="button-comment" class="pull-right btn btn-md btn-danger">Comment</button>
-    <button type="button" name="button-nextBoost" class="pull-left btn btn-md btn-danger">Boost somebody else</button>
+    <button type="button" name="button-nextBoost" class="pull-left btn btn-md btn-danger" ng-click="boost.getAsk()">Boost somebody else</button>
   </div>
 </div>
