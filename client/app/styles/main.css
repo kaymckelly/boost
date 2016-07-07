@@ -10,11 +10,16 @@ body {
   font-family: 'Raleway', sans-serif;
   color: #032225;
   background-color: rgba(238, 246, 247, 0.7);
-  height: 100%;
   margin-bottom: 30px;
 }
 .pageText {
   font-size: 16px;
+}
+.snap-drawers {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 150px;
 }
 .contentBox {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 16px 0 rgba(0, 0, 0, 0.19);
@@ -26,7 +31,6 @@ body {
   font-size: 35px;
 }
 .viewBox {
-  height: 100%;
   margin-bottom: 30px;
 }
 
@@ -41,6 +45,9 @@ body {
 }
 .hamburger {
   margin: 10px;
+}
+.navText {
+  color: #14818B;
 }
 
 
@@ -84,6 +91,7 @@ body {
 }
 .commentHelpText {
   font-size: 16px;
+  color: #8c8c8c;
 }
 .commentBox {
   padding: 30px;

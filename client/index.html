@@ -6,7 +6,7 @@
   <!-- styles: general -->
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/simplex/bootstrap.min.css" rel="stylesheet">
-  <link href="/app/lib/angular-snap/angular-snap.css" rel="stylesheet">
+  <!-- <link href="/app/lib/angular-snap/angular-snap.css" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Raleway" rel="stylesheet">
   <!-- styles: personal -->
   <link href="/app/styles/main.css" rel="stylesheet">
@@ -27,33 +27,33 @@
         <div ng-controller="NavController" uib-collapse="!isCollapsed" class="col-xs-3">
           <ul class="nav navbar-nav navLinks">
             <li>
-              <a href="/">Home</a>
+              <a href="/" class="navText">Home</a>
             </li>
             <li ng-class="menuClass('boost')">
-              <a href="boost">Boost Somebody</a>
+              <a href="boost" class="navText">Boost Somebody</a>
             </li>
             <li>
-              <a href="#">Inspire Me</a>
+              <a href="#" class="navText">Inspire Me</a>
             </li>
             <li>
-              <a href="#">Tasks</a>
+              <a href="#" class="navText">Tasks</a>
             </li>
             <li ng-class="menuClass('timer')">
-              <a href="timer">Timer</a>
+              <a href="timer" class="navText">Timer</a>
             </li>
             <li>
-              <a href="#">Habit Tracker</a>
+              <a href="#" class="navText">Habit Tracker</a>
             </li>
             <li>
-              <a href="#">Self-Care Checklist</a>
+              <a href="#" class="navText">Self-Care Checklist</a>
             </li>
             <!-- TODO this doesn't actually show up - how do?!?!?
             <li role="separator" class="divider"><hr /></li> -->
             <li>
-              <a href="#">Profile</a>
+              <a href="#" class="navText">Profile</a>
             </li>
             <li>
-              <a href="#">Logout</a>
+              <a href="#" class="navText">Logout</a>
             </li>
           </ul>
         </div>
