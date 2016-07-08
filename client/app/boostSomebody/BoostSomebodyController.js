@@ -18,7 +18,6 @@
       getAsk();
 
       function toggleComment() {
-        console.log('hi');
         vm.commentForm = !vm.commentForm;
       }
     }
