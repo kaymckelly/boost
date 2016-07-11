@@ -5,9 +5,8 @@
     .module('boostApp')
     .controller('LoginController', LoginController);
 
-    function LoginController(auth) {
+    function LoginController() {
       var vm = this;
-      vm.auth = auth;
       vm.userlogin = userlogin;
 
       function userlogin() {
