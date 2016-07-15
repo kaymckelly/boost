@@ -31,6 +31,5 @@
         .otherwise({
           redirectTo: '/'
         })
-    $locationProvider.html5Mode(true);
   };
 })();
