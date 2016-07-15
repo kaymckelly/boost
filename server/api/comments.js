@@ -9,7 +9,7 @@ function comments() {
 
 /* POST comment */
 router.post('/', function(req, res, next) {
-  comments().insert({ ask_id: 1, commenter_id: 2, comment: req.body.comment })
+  comments().insert({ ask_id: asks.id, commenter_id: 2, comment: req.body.comment })
     .then(function() {
       res.send('comment posted');
     })
