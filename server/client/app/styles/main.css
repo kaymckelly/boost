@@ -10,9 +10,16 @@ body {
   font-family: 'Raleway', sans-serif;
   color: #032225;
   background-color: rgba(238, 246, 247, 0.7);
+  margin-bottom: 30px;
 }
 .pageText {
   font-size: 16px;
+}
+.snap-drawers {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 150px;
 }
 .contentBox {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 16px 0 rgba(0, 0, 0, 0.19);
@@ -22,6 +29,9 @@ body {
 .contentBoxTitle {
   color: #14818B;
   font-size: 35px;
+}
+.viewBox {
+  margin-bottom: 30px;
 }
 
 
@@ -35,6 +45,9 @@ body {
 }
 .hamburger {
   margin: 10px;
+}
+.navText {
+  color: #14818B;
 }
 
 
@@ -71,12 +84,15 @@ body {
 .boostBtn {
   margin-left: 5px;
 }
-.commentTitle {
-  color: #14818B;
-  font-size: 20px;
+.commentLabel {
+  color: #F49A49;
+  font-size: 22px;
+  font-weight: bold;
+}
+.commentHelpText {
+  font-size: 16px;
+  color: #8c8c8c;
 }
 .commentBox {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 16px 0 rgba(0, 0, 0, 0.19);
   padding: 30px;
-  border: 1px solid #fff9b3;
 }

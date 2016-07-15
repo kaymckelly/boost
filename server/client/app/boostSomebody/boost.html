@@ -1,0 +1,32 @@
+<div class="col-xs-6 col-xs-offset-3 text-center contentBox">
+  <h3 class="contentBoxTitle">
+    Boost Somebody
+  </h3>
+  <p class="pageText">
+    Someone could use a boost! Can you help out?
+  </p>
+  <div class="col-xs-10 col-xs-offset-1 askBox">
+    <p class="askText">
+      {{ boost.ask }}
+    </p>
+  </div>
+  <div class="col-xs-10 col-xs-offset-1 boostButtonBox">
+    <button type="button" name="button-boost" class="pull-right btn btn-md btn-danger boostBtn">Boost!</button>
+    <button type="button" name="button-comment" class="pull-right btn btn-md btn-danger" ng-click="boost.toggleComment()">Comment</button>
+    <button type="button" name="button-nextBoost" class="pull-left btn btn-md btn-danger" ng-click="boost.getAsk()">Boost somebody else</button>
+  </div>
+</div>
+<div class="col-xs-6 col-xs-offset-3 commentBox" ng-show="boost.commentForm" ng-controller="CommentController as comments">
+  <form ng-submit="comments.newComment()">
+    <div class="form-group">
+      <label for="commentContent" class="commentLabel">
+        Add a comment
+        <p class="help-block commentHelpText">
+          THINK before you comment: is what you are about to say true, helpful, inspiring, necessary, and kind? If not, please don't post it.
+        </p>
+      </label>
+      <textarea ng-model="comments.lonelyChicken" class="form-control" name="comment" rows="3" cols="20" autofocus required maxlength="200"></textarea>
+    </div>
+    <button type="submit" class="btn btn-danger btn-sm" name="commentSubmit">Submit comment</button>
+  </form>
+</div>
