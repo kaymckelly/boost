@@ -24,9 +24,7 @@
           controllerAs: 'boost'
         })
         .when('/login', {
-          templateUrl: '/app/login/login.html',
-          controller: 'LoginController',
-          controllerAs: 'login'
+          templateUrl: '/app/login/login.html'
         })
         .otherwise({
           redirectTo: '/'

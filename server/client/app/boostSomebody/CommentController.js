@@ -16,7 +16,7 @@
         $http({
           method: 'post',
           url: 'http://localhost:3000/api/comments',
-          data: JSON.stringify({comment: vm.lonelyChicken})
+          data: JSON.stringify({ ask_id: 1, comment: vm.lonelyChicken})
         })
         .then(function(result){
           vm.comment = result.data.comment;

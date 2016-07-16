@@ -9,13 +9,15 @@ function comments() {
 
 /* POST comment */
 router.post('/', function(req, res, next) {
-  comments().insert({ ask_id: asks.id, commenter_id: users.id, comment: req.body.comment })
+  console.log(req.body);
+  console.log(req.user);
+  comments().insert({ ask_id: req.body.ask_id, commenter_id: req.user.id, comment: req.body.comment })
     .then(function() {
-      res.send('comment posted');
+      res.json('comment posted');
     })
     .catch(function(err) {
       console.log(err);
-      res.send(err);
+      res.json(err);
     });
 });
 
