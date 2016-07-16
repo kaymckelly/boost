@@ -16,8 +16,8 @@
     <button type="button" name="button-nextBoost" class="pull-left btn btn-md btn-danger" ng-click="boost.getAsk()">Boost somebody else</button>
   </div>
 </div>
-<div class="col-xs-6 col-xs-offset-3 commentBox" ng-show="boost.commentForm" ng-controller="CommentController as comments">
-  <form ng-submit="comments.newComment()">
+<div class="col-xs-6 col-xs-offset-3 commentBox" ng-show="boost.commentForm" >
+  <form ng-submit="boost.newComment()">
     <div class="form-group">
       <label for="commentContent" class="commentLabel">
         Add a comment
@@ -25,7 +25,7 @@
           THINK before you comment: is what you are about to say true, helpful, inspiring, necessary, and kind? If not, please don't post it.
         </p>
       </label>
-      <textarea ng-model="comments.lonelyChicken" class="form-control" name="comment" rows="3" cols="20" autofocus required maxlength="200"></textarea>
+      <textarea ng-model="boost.commentText" class="form-control" name="comment" rows="3" cols="20" autofocus required maxlength="200"></textarea>
     </div>
     <button type="submit" class="btn btn-danger btn-sm" name="commentSubmit">Submit comment</button>
   </form>

@@ -10,6 +10,8 @@ var InstagramStrategy = require('passport-instagram').Strategy;
 var api = require('./api');
 var dotenv = require('dotenv').config();
 var knex = require('./knex.js');
+var session = require('express-session');
+var cookieSession = require('cookie-session');
 
 var app = express();
 
@@ -19,38 +21,46 @@ app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'jade');
 
 app.use(logger('dev'));
+app.use(express.static(path.join(__dirname, 'client')));
+app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'client')));
+// app.use(cookieSession({ name: 'session', keys: [process.env.SESSION_SECRET] }));
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true
+ }));
 
 // TODO: cors will need to be recoded upon deployment, as origin of req will change. make sure req is from a single specified origin, for security's sake
 app.use(cors());
 app.use(passport.initialize());
-app.use('/api', api);
+app.use(passport.session());
 
 // Instagram oAuth
-app.get('/auth/instagram',
-  passport.authenticate('instagram'));
-
-app.get('/auth/instagram/callback',
-  passport.authenticate('instagram', { failureRedirect: '/#/login' }),
-  function(req, res) {
-    res.redirect('/');
-  });
-
 passport.serializeUser(function(user, done) {
-  done(null, user);
+  console.log('Serializing user', user);
+  done(null, user.id);
 });
 
-passport.deserializeUser(function(obj, done) {
-  done(null, obj);
+passport.deserializeUser(function(id, done) {
+  console.log('Deserializing in process');
+  knex('users').first().where('id', id).then(function(user) {
+    if(user) {
+      console.log('Deserialized user', user);
+      done(null, user);
+    }
+    else {
+      console.log('Unable to deserialize user');
+      done(new Error('User not found'));
+    }
+  });
 });
 
 passport.use(new InstagramStrategy({
   clientID: process.env.INSTAGRAM_CLIENT_ID,
   clientSecret: process.env.INSTAGRAM_CLIENT_SECRET,
-  callbackURL: 'http://127.0.0.1:3000/auth/instagram/callback'
+  callbackURL: '/auth/instagram/callback'
   },
   function(accessToken, refreshToken, profile, done) {
     knex('users').first().where('insta_id', profile.username).then(function(user) {
@@ -61,16 +71,26 @@ passport.use(new InstagramStrategy({
           bio: profile.bio
         }, '*').then(function(user) {
           done(null, user[0]);
+        }).catch(function(error) {
+          done(error);
         });
       }
       else if(user) {
-        done(null, user[0]);
-      }
-      else {
-        done(error);
+        done(null, user);
       }
   })
 }));
+
+app.get('/auth/instagram',
+  passport.authenticate('instagram'));
+
+app.get('/auth/instagram/callback',
+  passport.authenticate('instagram', { failureRedirect: '/#/login' }),
+  function(req, res) {
+    res.redirect('/');
+  });
+
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
