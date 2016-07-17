@@ -47,7 +47,10 @@ body {
 }
 .navMenu {
   margin-left: 10px;
-  /*color: #14818B;*/
+}
+.navMenu li a:hover {
+  background-color: #F49A49;
+  color: #F3F8F9;
 }
 
 
