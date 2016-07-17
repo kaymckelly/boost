@@ -17,73 +17,35 @@
     <div class="container-fluid">
       <nav class="navbar navbar-default navbar-fixed-top navigationBar">
         <div class="btn-group" uib-dropdown is-open="status.isopen">
-          <button id="navButton" type="button" name="navHamburger" class="btn btn-danger" uib-dropdown-toggle ng-disable="disabled">
+          <button id="navButton" type="button" name="navHamburger" class="btn btn-lg" uib-dropdown-toggle ng-disable="disabled">
             <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
           </button>
-          <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="navButton">
+          <ul class="dropdown-menu navMenu" uib-dropdown-menu role="menu" aria-labelledby="navButton">
             <li role="menuitem">
-              <a href="#">stuff</a>
+              <a href="/" class="navText">Home</a>
+            </li>
+            <li role="menuitem" ng-class="menuClass('boost')">
+              <a href="/#/boost" class="navText">Boost Somebody</a>
             </li>
             <li role="menuitem">
-              <a href="#">yeah</a>
+              <a href="#">Inspire Me</a>
+            </li>
+            <li role="menuitem" ng-class="menuClass('timer')">
+              <a href="/#/timer" class="navText">Meditation Timer</a>
             </li>
             <li role="menuitem">
-              <a href="#">no</a>
-            </li>
-            <li role="menuitem">
-              <a href="#">sweet bruh</a>
-            </li>
-            <li role="menuitem">
-              <a href="#"></a>
+              <a href="#" class="navText">Self-Care Checklist</a>
             </li>
             <li class="divider"></li>
             <li role="menuitem">
-              <a href="#">and</a>
-            </li>
-            <li role="menuitem">
-              <a href="#"></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <!-- <nav class="navbar navbar-default navbar-fixed-top navigationBar">
-        <div class="navbar-header">
-          <snap-content>
-            <button snap-toggle="" class="btn navbar-btn hamburger" ng-click="isCollapsed = !isCollapsed">
-              <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-            </button>
-          </snap-content>
-        </div>
-      </nav>
-      <snap-drawer>
-        <div ng-controller="NavController" uib-collapse="!isCollapsed" class="col-xs-3">
-          <ul class="nav navbar-nav navLinks">
-            <li>
-              <a href="/" class="navText">Home</a>
-            </li>
-            <li ng-class="menuClass('boost')">
-              <a href="/#/boost" class="navText">Boost Somebody</a>
-            </li>
-            <li>
-              <a href="#" class="navText">Inspire Me</a>
-            </li>
-            <li ng-class="menuClass('timer')">
-              <a href="/#/timer" class="navText">Timer</a>
-            </li>
-            <li>
-              <a href="#" class="navText">Self-Care Checklist</a>
-            </li> -->
-            <!-- TODO this doesn't actually show up - how do?!?!? -->
-            <!-- <li role="separator" class="divider"><hr /></li>
-            <li>
               <a href="#" class="navText">Profile</a>
             </li>
-            <li>
-              <a ng-class="menuClass('login')" href="/#/login" class="navText">Login</a>
+            <li role="menuitem" ng-class="menuClass('login')">
+              <a href="/#/login" class="navText">Login</a>
             </li>
           </ul>
         </div>
-      </snap-drawer> -->
+      </nav>
       <div class="col-xs-6 col-xs-offset-3">
         <h1 class="text-center pageTitle">
           Boost

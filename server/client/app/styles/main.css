@@ -37,17 +37,17 @@ body {
 
 /* Navbar */
 .navigationBar {
-  height: 60px;
+  height: 70px;
   background-color: rgba(214, 233, 235, 0.9);
 }
-.navLinks {
-  margin-top: 60px;
-}
-.hamburger {
+#navButton
+{
+  background-color: #F49A49;
   margin: 10px;
 }
-.navText {
-  color: #14818B;
+.navMenu {
+  margin-left: 10px;
+  /*color: #14818B;*/
 }
 
 
