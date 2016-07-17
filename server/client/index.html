@@ -16,6 +16,37 @@
   <body>
     <div class="container-fluid">
       <nav class="navbar navbar-default navbar-fixed-top navigationBar">
+        <div class="btn-group" uib-dropdown is-open="status.isopen">
+          <button id="navButton" type="button" name="navHamburger" class="btn btn-danger" uib-dropdown-toggle ng-disable="disabled">
+            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+          </button>
+          <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="navButton">
+            <li role="menuitem">
+              <a href="#">stuff</a>
+            </li>
+            <li role="menuitem">
+              <a href="#">yeah</a>
+            </li>
+            <li role="menuitem">
+              <a href="#">no</a>
+            </li>
+            <li role="menuitem">
+              <a href="#">sweet bruh</a>
+            </li>
+            <li role="menuitem">
+              <a href="#"></a>
+            </li>
+            <li class="divider"></li>
+            <li role="menuitem">
+              <a href="#">and</a>
+            </li>
+            <li role="menuitem">
+              <a href="#"></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- <nav class="navbar navbar-default navbar-fixed-top navigationBar">
         <div class="navbar-header">
           <snap-content>
             <button snap-toggle="" class="btn navbar-btn hamburger" ng-click="isCollapsed = !isCollapsed">
@@ -41,9 +72,9 @@
             </li>
             <li>
               <a href="#" class="navText">Self-Care Checklist</a>
-            </li>
+            </li> -->
             <!-- TODO this doesn't actually show up - how do?!?!? -->
-            <li role="separator" class="divider"><hr /></li>
+            <!-- <li role="separator" class="divider"><hr /></li>
             <li>
               <a href="#" class="navText">Profile</a>
             </li>
@@ -52,7 +83,7 @@
             </li>
           </ul>
         </div>
-      </snap-drawer>
+      </snap-drawer> -->
       <div class="col-xs-6 col-xs-offset-3">
         <h1 class="text-center pageTitle">
           Boost
