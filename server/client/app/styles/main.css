@@ -27,6 +27,13 @@ body {
 .viewBox {
   margin-bottom: 30px;
 }
+a:link {
+  color: #14818B;
+}
+a:hover {
+  color: #F49A49;
+  text-decoration: none;
+}
 
 
 /* Navbar */
@@ -122,11 +129,6 @@ body {
 }
 .quoteBtn {
   margin-bottom: 40px;
-}
-.quoteLink {
-  /*hover = orange
-  main text = teal
-  remove text decoration*/
 }
 .quoteNotes {
   font-size: 12px;
