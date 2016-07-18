@@ -7,7 +7,6 @@
       'ngAnimate',
       'ngTouch',
       'ngRoute',
-      'snap'
     ])
     .config(config);
 
@@ -25,6 +24,9 @@
         })
         .when('/login', {
           templateUrl: '/app/login/login.html'
+        })
+        .when('/home', {
+          templateUrl: '/app/home/home.html'
         })
         .otherwise({
           redirectTo: '/'
