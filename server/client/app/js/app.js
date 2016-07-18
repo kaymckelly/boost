@@ -7,7 +7,6 @@
       'ngAnimate',
       'ngTouch',
       'ngRoute',
-      'snap'
     ])
     .config(config);
 
