@@ -28,8 +28,11 @@
         .when('/home', {
           templateUrl: '/app/home/home.html'
         })
+        .when('/inspireme', {
+          templateUrl: '/app/inspire-me/inspireme.html'
+        })
         .otherwise({
-          redirectTo: '/'
+          redirectTo: '/home'
         })
   };
 })();
