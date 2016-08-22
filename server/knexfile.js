@@ -9,7 +9,6 @@ module.exports = {
 
   production: {
     client: 'pg',
-    // heroku default variable needed instead of testuser
-    connection: process.env.testuser
+    connection: process.env.DATABASE_URL
   }
 };

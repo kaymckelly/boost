@@ -27,6 +27,13 @@ body {
 .viewBox {
   margin-bottom: 30px;
 }
+a:link {
+  color: #14818B;
+}
+a:hover {
+  color: #F49A49;
+  text-decoration: none;
+}
 
 
 /* Navbar */
@@ -106,4 +113,25 @@ body {
 }
 .commentBox {
   padding: 30px;
+}
+
+
+/* Inspire Me */
+.quoteText {
+  font-family: 'Amatic SC', cursive;
+  color: #14818B;
+  font-size: 40px;
+  text-align: justify;
+}
+.quoteAuthor {
+  text-align: right;
+  margin-top: 20px;
+}
+.quoteBtn {
+  margin-bottom: 40px;
+}
+.quoteNotes {
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: -20px;
 }
