@@ -17,8 +17,6 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-// TODO: don't need this, correct? since views are front-end angular...or do I need error pages in jade?
-// app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'client')));
